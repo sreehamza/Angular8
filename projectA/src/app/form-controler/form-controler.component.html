@@ -1,0 +1,14 @@
+<p>form-controler works!</p>
+<H1>name</H1>
+<input type="text" [formControl]="name">
+    {{name.value}}
+<button (click)="update()">submit</button>
+<br>
+<h2>FormGroup</h2>
+<form [formGroup]="profileform">
+    <label for="FormGroup">
+        name : <input type="text" formControlName="firstname">
+        name : <input type="text" formControlName="lastname">
+    </label>
+</form>
+{{profileform.value| json}}

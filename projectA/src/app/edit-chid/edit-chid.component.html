@@ -1,0 +1,16 @@
+<br><h3>Edit/Add Student Details</h3>
+<!-- <h2>{{stdnt |json}}</h2> -->
+{{disableAddBtn}}
+{{disableSaveBtn}}
+
+<div>
+    <input [(ngModel)]="stdnt.id" name="txt1">
+    <input [(ngModel)]="stdnt.name" name="txt2">
+    <input [(ngModel)]="stdnt.total" name="txt3">
+</div>
+<br>
+
+<div>
+    <input type="button" value="Add To Table" (click)="add()" [disabled]="disableAddBtn">
+    <input type="button" value="Save" (click)="save()" [disabled]="disableSaveBtn">
+</div>

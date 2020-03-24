@@ -1,0 +1,27 @@
+<p>employee works!</p>
+<div>
+    <table>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Dprtmt</th>
+        <th>Salary1</th>
+        <th>Salary2</th>
+        <th>Salary3</th>
+        <th>total</th>
+
+        <tr *ngFor="let emp of employee; let i=index; let odd=odd;">
+            <td>({{i}}) {{odd}} {{emp.id}}</td>
+            <td>({{i}}){{emp.name}} </td>
+            <td>({{i}}) {{emp.department}}</td>
+            <td>({{i}}) {{emp.salary[0]}}</td>
+            <td>({{i}}) {{emp.salary[1]}}</td>
+            <td>({{i}}) {{emp.salary[2]}}</td>
+            <td>({{i}}) {{emp.total}}</td>
+          
+        </tr>
+    </table>
+    <h2 *ngIf="sum">{{meg}}</h2>
+    <input type="text" id="demo">
+    {{value}}
+    <!-- <input type="button" (click)="change1(demo)" value="ckick me"> -->
+</div>

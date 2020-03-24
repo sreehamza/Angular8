@@ -1,0 +1,36 @@
+<p>first works!</p>
+{{title}}
+<div *ngIf="A">Sreenath</div>
+<div *ngFor="let temp of cars">
+    {{temp}}
+</div>
+<div *ngFor="let num of numbers">
+    <div *ngIf="num%2===0">
+      <h2>even {{num}}</h2>  
+    </div>
+</div>
+<div *ngFor="let num of numbers">
+    <div *ngIf="!(num%2===0)">
+      <h2>odd {{num}}</h2>  
+    </div>
+</div>
+{{s1 | json}}
+<table id="demo">
+  <th>id</th>
+  <th>name</th>
+  <th>mark1</th>
+  <th>mark2</th>
+  <th>mark3</th>
+  <th>Total</th>
+  <tr *ngFor="let stud of students">
+    <td>{{stud.id}}</td>
+    <td>{{stud.name}}</td>
+    <td>{{stud.mark[0]}}</td>
+    <td>{{stud.mark[1]}}</td>
+    <td>{{stud.mark[2]}}</td>
+    <td>{{stud.total}}</td>
+  </tr>
+</table>
+
+<div appHight>This is a text</div>
+<div appSreenath>this is my second attribute directive</div>

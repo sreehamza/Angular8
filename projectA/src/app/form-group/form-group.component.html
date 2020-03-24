@@ -1,0 +1,13 @@
+<h1>form-group works!</h1>
+<form [formGroup]="adrress">
+    <label for="housenumber">
+        House Number : <input type="text" formControlName="HouseNumber"><br><br>
+        House Name : <input type="text" formControlName="HouseName"><br><br>
+        Street : <input type="text" formControlName="Street">
+    </label>
+    <div>
+        <button (click)="clear()">clear</button>
+    </div>
+    
+</form>
+{{adrress.value | json}}

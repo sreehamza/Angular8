@@ -1,0 +1,28 @@
+<p>firsttask works!</p>
+<div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+
+            <th>TOTAL</th>
+        </tr>
+        <tr *ngFor="let temp of students; let i = index;">
+            <td>{{temp.id}}</td>
+            <td>{{temp.name}}</td>
+
+            <td>{{temp.total}}</td>
+            <td><button (click)="editStudentDetails(i)">Edit</button></td>
+        </tr>
+    </table><br />
+    <!-- <input [(ngModel)]="s1.id" name="txt1">
+    <input [(ngModel)]="s1.name" name="txt2">
+    <input [(ngModel)]="s1.total" name="txt3"> -->
+
+    <!-- <div>
+        <input type="button" value="Add To Table" (click)="add()" [disabled]="disableAddBtn" >
+        <input type="button" value="Save" (click)="save()" [disabled]="disableSaveBtn">
+    </div> -->
+{{ mesage| json}}
+</div>
+<app-edit-chid (addEvent) = "addstate($event)" (saveEvent)="saveParant($event)"  [stdnt] = "s1" [addBtnState] = "disableAddBtn" [saveBtnState] = "disableSaveBtn" ></app-edit-chid>

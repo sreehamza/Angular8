@@ -1,0 +1,12 @@
+<h1>CHILD COMPONENT</h1>
+
+<div>
+        <input [(ngModel)]="s1.id">
+        <input [(ngModel)]="s1.name">
+        <input [(ngModel)]="s1.total">
+    </div>
+    <div>
+        <input type="button" value="add to the table" (click)="add()" [disabled]="disableAddBtn">
+        <br>
+        <input type="button" value="save" (click)="save()" [disabled]="disableSaveBtn">
+    </div>

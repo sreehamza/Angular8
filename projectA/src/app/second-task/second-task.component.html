@@ -1,0 +1,17 @@
+<h1>PARENT COMPONENT</h1>
+<div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>TOTAL</th>
+        </tr>
+        <tr *ngFor="let temp of students, let i = index">
+            <td>{{temp.id}}</td>
+            <td>{{temp.name}}</td>
+            <td>{{temp.total}}</td>
+            <input type="button" value="edit" (click)="editStudentDetails(i)">
+        </tr>
+    </table>
+</div>
+<app-second-child (addEvent) = "addstate($event)" (saveEvent)="saveParant($event)" [s1]="objst" [addBtnState] = "disableAddBtn" [saveBtnState] = "disableSaveBtn"></app-second-child>
